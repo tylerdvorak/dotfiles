@@ -1,5 +1,5 @@
-#+TITLE: Dotfiles
-#+AUTHOR: Tyler Dvorak
+#+TITLE: My dotfiles
+#+AUTHOR: Tyler Dvorak    
 #+EMAIL: github@tylerdvorak.com
 
 #+BEGIN_QUOTE
@@ -7,3 +7,39 @@ These are my dotfiles, there are many like them but these ones are mine.
 
     -- Dotfiles Creed
 #+END_QUOTE
+* Why
+I'm getting back into NixOS and wanted a stable configuration to build off of. I will be expanding into using Nix Flakes and opting for more home-manager usage when I can, but this at least gives me something to start with and looks clean from a directory standpoinht.
+* Structure
+- ~bin~ :: Bash scripts that might be useful
+- ~hosts~ :: Machine or host specific configuration
+- ~lib~ :: Contains a few useful functions used in this configuration.
+- ~config~ :: Contains all the configurations... as one would expect.
+  - ~home~ :: My dotfiles and configuration for my user
+  - ~nixos~ :: Configuration of the core NixOS experience
+  - ~pkgs~ :: Contains overlays of packages that are not (yet) in ~nixpkgs~
+  - ~modules~ :: Packages or services that requires their own configuration module
+  - ~variables.nix~ :: Defines an attribute set containing variables available
+       across the whole configuration, used for stuff like hostnames etc.
+- ~media~ :: Artwork and so on
+* How
+1. Install NixOS on any machine and then clone these dotfiles into ~/etc/nixos/~.
+2. Add the required channels:
+   #+begin_src sh
+     sudo nix-channel --add https://nixos.org/channels/nixos-unstable unstable
+     sudo nix-channel --add https://github.com/rycee/home-manager/archive/release-19.09.tar.gz home-manager
+     sudo nix-channel --update
+   #+end_src
+3. Set the path to the host configuration: ~export
+   NIXOS_CONFIG=/etc/config/hosts/<host>/default.nix~.
+4. Build the configuration and cross your fingers, ~sudo nixos-rebuild switch~.
+5. ???
+6. Profit!
+* Inspiration
+Huge thanks to the extremely helpful people in ~#nixos~ on Freenode, they've been
+a great help with not only helping me learn Nix and more NixOS but also general
+Linux stuff.
+
+I stole this blatently from and older version of https://github.com/sondr3
+- [[https://github.com/kalbasit/shabka][kalbasit/shabka]]
+* License
+All code is licensed under the MIT license.
