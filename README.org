@@ -1,4 +1,4 @@
-#+TITLE: NixOS
+#+TITLE: Dotfiles
 #+AUTHOR: Tyler Dvorak
 #+EMAIL: github@tylerdvorak.com
 
