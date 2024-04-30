@@ -55,24 +55,12 @@
     };
     extensions = [
       # bbenoist.Nix
-      # bungcip.better-toml
-      # cmstead.jsrefactor
-      # CoenraadS.bracket-pair-colorizer
-      # Compulim.compulim-vscode-closetag
-      # dbaeumer.vscode-eslint
-      # EditorConfig.EditorConfig
-      # esbenp.prettier-vscode
-      # formulahendry.auto-close-tag
-      # formulahendry.auto-rename-tag
-      # hex-ci.stylelint-plus
-      # jpoissonnier.vscode-styled-components
-      # mgmcdermott.vscode-language-babel
-      # naumovs.color-highlight
-      # silvenon.mdx
-      # VisualStudioExptTeam.vscodeintellicode
-      # vscode-icons-team.vscode-icons
-      # vscodevim.vim
-      # Zignd.html-css-class-completion
+      # jdinhlife.gruvbox
+      # github.vscode-pull-request-github
+      # github.remotehub
+      # ms-vscode-remote.remote-ssh 
+      # ms-vscode.remote-explorer
+      # ms-vscode.remote-repositories
     ];
   };
 }
