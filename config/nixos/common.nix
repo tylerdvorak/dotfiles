@@ -18,7 +18,7 @@ in
     autoOptimiseStore = true;
     nixPath = [
       "nixpkgs=/nix/var/nix/profiles/per-user/root/channels/nixos"
-      "nixos-config=/etc/nixos/hosts/${variables.hostname}/default.nix"
+      "nixos-config=/etc/nixos/dotfiles/hosts/${variables.hostname}/default.nix"
       "/nix/var/nix/profiles/per-user/root/channels"
     ];
   };
@@ -31,7 +31,6 @@ in
 
   networking = {
     networkmanager.enable = true;
-    ];
   };
 
   # List packages installed in system profile. To search, run:
