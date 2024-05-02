@@ -21,6 +21,7 @@ in
         steam
         heroic
         gamemode
+        gamescope
         mangohud
       ];
     };

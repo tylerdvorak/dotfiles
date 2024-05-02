@@ -10,13 +10,15 @@
     # Enable the X11 windowing system.
     xserver = {
       enable = true;
-      layout = "us,no";
-      xkbOptions = "grp:alt_caps_toggle";
-      exportConfiguration = true;
 
       # Enable the KDE Desktop Environment.
       displayManager.sddm.enable = true;
-      desktopManager.plasma5.enable = true;
+      desktopManager.plasma6.enable = true;
     };
   };
+  environment.plasma6.excludePackages = with pkgs.libsForQt5; [
+    plasma-browser-integration
+    konsole
+    oxygen
+  ];
 }
