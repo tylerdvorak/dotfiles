@@ -1,4 +1,4 @@
-#+TITLE: My dotfiles
+#+TITLE: My Dotfiles
 #+AUTHOR: Tyler Dvorak
 #+EMAIL: github@tylerdvorak.com
 
@@ -32,6 +32,7 @@ I'm also going to be storing Windows Dots here as well. I have not decided how I
 
 ** generic
 ~media~ :: Artwork and so on
+
 * How To :: nixos
 1. Install NixOS on any machine and then clone these dotfiles into ~/etc/nixos/~.
 2. Add the required channels:
@@ -44,14 +45,15 @@ sudo nix-channel --update
 4. Build the configuration and cross your fingers, ~sudo nixos-rebuild switch~.
 5. ???
 6. Profit!
+
 * How To :: windows
 1. Start with a clean Windows Install. Use winutil's MicroWin or some equivalent if you're trying to be extra minimal.
-2. Run CTT winutil, using preconfigured winutil.json
-3. Run extras.ps1
-4. Move ~.glzr~ to ~%HOMEPATH%~
-5. Move ~settings.json~ to ~%LOCALAPPDATA%\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState~
-6. Move ~Microsoft.Powershell_profile.ps1~ to ~$USERPROFILE$~
-7. Profit!
+2. Clone this github repo.
+3. Run setsimlink.ps1 to create simlinks before installing applications. This will allow version control with Github. You can skip this and manually move files to their locations as well.
+4. Run CTT winutil, using preconfigured winutil.json
+5. Run extras.ps1
+6. Profit!
+
 * Work To Do
 I plan on scripting some of the setup for this to make it as simple as possible.
 My goal would be to create an Ansible Playbook that will do this all for me ideally, but I will likely start by settling with simple scripts to run through the steps automatically.
