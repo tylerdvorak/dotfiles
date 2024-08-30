@@ -11,7 +11,7 @@ These are my dotfiles, there are many like them but these ones are mine.
 I'm getting back into NixOS and wanted a stable configuration to build off of. I will be expanding into using Nix Flakes and opting for more home-manager usage when I can, but this at least gives me something to start with and looks clean from a directory standpoint.
 I'm also going to be storing Windows Dots here as well. I have not decided how I plan to keep them managed, but am looking into tools like chezmoi.
 * Structure
-** ~nixos~ :: nixos configuration files
+** nixos
 - ~bin~ :: Bash scripts that might be useful
 - ~hosts~ :: Machine or host specific configuration
 - ~lib~ :: Contains a few useful functions used in this configuration.
@@ -22,7 +22,7 @@ I'm also going to be storing Windows Dots here as well. I have not decided how I
    - - ~modules~ :: Packages or services that requires their own configuration module
    - - ~variables.nix~ :: Defines an attribute set containing variables available across the whole configuration, used for stuff like hostnames etc.
 
-** ~windows~
+** windows
 - ~%HOMEPATH%~ :: Home Directory configurations
    - - ~.glzr~ :: GlazeWM Configuration files
 - ~Microsoft.Powershell_profile.ps1~ :: I've included my profile for Powershell to init Zoxide and Oh My Posh
@@ -30,7 +30,7 @@ I'm also going to be storing Windows Dots here as well. I have not decided how I
 - ~winutil.json~ :: JSON Export of preconfigured settings for @ChrisTitusTech's amazing winutil. Easy installation of most applications used.
 - ~extras.ps1~ :: Basic PowerShell script to install anything not configured by CTT winutil automatically.
 
-** ~generic~
+** generic
 ~media~ :: Artwork and so on
 * How To :: nixos
 1. Install NixOS on any machine and then clone these dotfiles into ~/etc/nixos/~.
