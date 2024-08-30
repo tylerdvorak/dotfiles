@@ -1,0 +1,215 @@
+{
+    "WPFTweaks":  [
+                      "WPFTweaksRestorePoint",
+                      "WPFTweaksWifi",
+                      "WPFTweaksDisableipsix",
+                      "WPFTweaksHome",
+                      "WPFTweaksTeredo",
+                      "WPFTweaksDisableLMS1",
+                      "WPFTweaksStorage",
+                      "WPFTweaksHiber",
+                      "WPFTweaksDebloatAdobe",
+                      "WPFTweaksConsumerFeatures",
+                      "WPFTweaksDVR",
+                      "WPFTweaksDisableFSO",
+                      "WPFTweaksTele",
+                      "WPFTweaksRemoveHomeGallery",
+                      "WPFTweaksAH",
+                      "WPFTweaksEndTaskOnTaskbar",
+                      "WPFTweaksRemoveCopilot",
+                      "WPFTweaksLoc",
+                      "WPFTweaksDiskCleanup",
+                      "WPFTweaksServices",
+                      "WPFTweaksPowershell7Tele",
+                      "WPFTweaksDeleteTempFiles",
+                      "WPFTweaksUTC",
+                      "WPFTweaksDisableBGapps"
+                  ],
+    "Install":  [
+                    {
+                        "winget":  "Microsoft.WindowsTerminal",
+                        "choco":  "microsoft-windows-terminal"
+                    },
+                    {
+                        "winget":  "7zip.7zip",
+                        "choco":  "7zip"
+                    },
+                    {
+                        "winget":  "Vencord.Vesktop",
+                        "choco":  "na"
+                    },
+                    {
+                        "winget":  "SoftFever.OrcaSlicer",
+                        "choco":  "orcaslicer"
+                    },
+                    {
+                        "winget":  "Neovim.Neovim",
+                        "choco":  "neovim"
+                    },
+                    {
+                        "winget":  "JanDeDobbeleer.OhMyPosh",
+                        "choco":  "oh-my-posh"
+                    },
+                    {
+                        "winget":  "File-New-Project.EarTrumpet",
+                        "choco":  "eartrumpet"
+                    },
+                    {
+                        "winget":  "GitHub.GitHubDesktop",
+                        "choco":  "git;github-desktop"
+                    },
+                    {
+                        "winget":  "Flameshot.Flameshot",
+                        "choco":  "flameshot"
+                    },
+                    {
+                        "winget":  "TheDocumentFoundation.LibreOffice",
+                        "choco":  "libreoffice-fresh"
+                    },
+                    {
+                        "winget":  "Microsoft.Edge",
+                        "choco":  "microsoft-edge"
+                    },
+                    {
+                        "winget":  "GitHub.cli",
+                        "choco":  "git;gh"
+                    },
+                    {
+                        "winget":  "Microsoft.PowerToys",
+                        "choco":  "powertoys"
+                    },
+                    {
+                        "winget":  "Python.Python.3.12",
+                        "choco":  "python"
+                    },
+                    {
+                        "winget":  "Notepad++.Notepad++",
+                        "choco":  "notepadplusplus"
+                    },
+                    {
+                        "winget":  "Adobe.Acrobat.Reader.64-bit",
+                        "choco":  "adobereader"
+                    },
+                    {
+                        "winget":  "LizardByte.Sunshine",
+                        "choco":  "sunshine"
+                    },
+                    {
+                        "winget":  "Guru3D.Afterburner",
+                        "choco":  "msiafterburner"
+                    },
+                    {
+                        "winget":  "Valve.Steam",
+                        "choco":  "steam-client"
+                    },
+                    {
+                        "winget":  "WinSCP.WinSCP",
+                        "choco":  "winscp"
+                    },
+                    {
+                        "winget":  "Microsoft.OneDrive",
+                        "choco":  "onedrive"
+                    },
+                    {
+                        "winget":  "Microsoft.DotNet.DesktopRuntime.8",
+                        "choco":  "dotnet-8.0-runtime"
+                    },
+                    {
+                        "winget":  "CodecGuide.K-LiteCodecPack.Standard",
+                        "choco":  "k-litecodecpack-standard"
+                    },
+                    {
+                        "winget":  "Mozilla.Firefox",
+                        "choco":  "firefox"
+                    },
+                    {
+                        "winget":  "Microsoft.PowerShell",
+                        "choco":  "powershell-core"
+                    },
+                    {
+                        "winget":  "ajeetdsouza.zoxide",
+                        "choco":  "zoxide"
+                    },
+                    {
+                        "winget":  "Microsoft.VisualStudioCode",
+                        "choco":  "vscode"
+                    },
+                    {
+                        "winget":  "Nextcloud.NextcloudDesktop",
+                        "choco":  "nextcloud-client"
+                    },
+                    {
+                        "winget":  "Bitwarden.Bitwarden",
+                        "choco":  "bitwarden"
+                    },
+                    {
+                        "winget":  "AntibodySoftware.WizTree",
+                        "choco":  "wiztree"
+                    },
+                    {
+                        "winget":  "calibre.calibre",
+                        "choco":  "calibre"
+                    },
+                    {
+                        "winget":  "HeroicGamesLauncher.HeroicGamesLauncher",
+                        "choco":  "na"
+                    },
+                    {
+                        "winget":  "Git.Git",
+                        "choco":  "git"
+                    },
+                    {
+                        "winget":  "Balena.Etcher",
+                        "choco":  "etcher"
+                    },
+                    {
+                        "winget":  "Alex313031.Thorium.AVX2",
+                        "choco":  "na"
+                    },
+                    {
+                        "winget":  "TechPowerUp.NVCleanstall",
+                        "choco":  "na"
+                    }
+                ],
+    "WPFInstall":  [
+                       "WPFInstallterminal",
+                       "WPFInstall7zip",
+                       "WPFInstallvesktop",
+                       "WPFInstallorcaslicer",
+                       "WPFInstallneovim",
+                       "WPFInstallposh",
+                       "WPFInstalleartrumpet",
+                       "WPFInstallgithubdesktop",
+                       "WPFInstallflameshot",
+                       "WPFInstalllibreoffice",
+                       "WPFInstalledge",
+                       "WPFInstallgithubcli",
+                       "WPFInstallpowertoys",
+                       "WPFInstallpython3",
+                       "WPFInstallnotepadplus",
+                       "WPFInstalladobe",
+                       "WPFInstallsunshine",
+                       "WPFInstallmsiafterburner",
+                       "WPFInstallsteam",
+                       "WPFInstallwinscp",
+                       "WPFInstallonedrive",
+                       "WPFInstalldotnet8",
+                       "WPFInstallklite",
+                       "WPFInstallfirefox",
+                       "WPFInstallpowershell",
+                       "WPFInstallzoxide",
+                       "WPFInstallvscode",
+                       "WPFInstallnextclouddesktop",
+                       "WPFInstallbitwarden",
+                       "WPFInstallwiztree",
+                       "WPFInstallcalibre",
+                       "WPFInstallheroiclauncher",
+                       "WPFInstallgit",
+                       "WPFInstalletcher",
+                       "WPFInstallthorium",
+                       "WPFInstallnvclean"
+                   ],
+    "WPFFeature":  [
+
+                   ]
+}
