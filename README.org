@@ -12,10 +12,10 @@ I'm getting back into NixOS and wanted a stable configuration to build off of. I
 I'm also going to be storing Windows Dots here as well. I have not decided how I plan to keep them managed, but am looking into tools like chezmoi.
 * Structure
 ** ~nixos~ :: nixos configuration files
-~bin~ :: Bash scripts that might be useful
-~hosts~ :: Machine or host specific configuration
-~lib~ :: Contains a few useful functions used in this configuration.
-~config~ :: Contains all the configurations... as one would expect.
+- ~bin~ :: Bash scripts that might be useful
+- ~hosts~ :: Machine or host specific configuration
+- ~lib~ :: Contains a few useful functions used in this configuration.
+- ~config~ :: Contains all the configurations... as one would expect.
    - - ~home~ :: My dotfiles and configuration for my user
    - - ~nixos~ :: Configuration of the core NixOS experience
    - - ~pkgs~ :: Contains overlays of packages that are not (yet) in ~nixpkgs~
@@ -23,12 +23,12 @@ I'm also going to be storing Windows Dots here as well. I have not decided how I
    - - ~variables.nix~ :: Defines an attribute set containing variables available across the whole configuration, used for stuff like hostnames etc.
 
 ** ~windows~
-~%HOMEPATH%~ :: Home Directory configurations
+- ~%HOMEPATH%~ :: Home Directory configurations
    - - ~.glzr~ :: GlazeWM Configuration files
-~Microsoft.Powershell_profile.ps1~ :: I've included my profile for Powershell to init Zoxide and Oh My Posh
-~settings.json~ :: Windows Terminal Settings, including configured profiles and themes
-~winutil.json~ :: JSON Export of preconfigured settings for @ChrisTitusTech's amazing winutil. Easy installation of most applications used.
-~extras.ps1~ :: Basic PowerShell script to install anything not configured by CTT winutil automatically.
+- ~Microsoft.Powershell_profile.ps1~ :: I've included my profile for Powershell to init Zoxide and Oh My Posh
+- ~settings.json~ :: Windows Terminal Settings, including configured profiles and themes
+- ~winutil.json~ :: JSON Export of preconfigured settings for @ChrisTitusTech's amazing winutil. Easy installation of most applications used.
+- ~extras.ps1~ :: Basic PowerShell script to install anything not configured by CTT winutil automatically.
 
 ** ~generic~
 ~media~ :: Artwork and so on
