@@ -8,7 +8,16 @@ in
     # Include the results of the hardware scan.
     ./hardware.nix
     ../../config/variables.nix
-    ../../config/nixos
+    ../../config/nixos/audio.nix
+    ../../config/nixos/boot.nix
+    ../../config/nixos/common.nix
+    ../../config/nixos/default.nix
+    ../../config/nixos/fonts.nix
+    ../../config/nixos/gaming.nix
+    ../../config/nixos/programs.nix
+    ../../config/nixos/services.nix
+    ../../config/nixos/users.nix
+    ../../config/nixos/virtualization.nix
   ];
 
   variables.hostname = hostname;

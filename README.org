@@ -37,11 +37,10 @@ I'm also going to be storing Windows Dots here as well. I have not decided how I
 2. Add the required channels:
 #+begin_src sh
 sudo nix-channel --add https://nixos.org/channels/nixos-unstable unstable
-sudo nix-channel --add https://github.com/rycee/home-manager/archive/release-19.09.tar.gz home-manager
+sudo nix-channel --add https://github.com/nix-community/home-manager/archive/master.tar.gz home-manager
 sudo nix-channel --update
 #+end_src
-3. Set the path to the host configuration: ~export
-NIXOS_CONFIG=/etc/config/hosts/<host>/default.nix~.
+3. Set the path to the host configuration: ~export NIXOS_CONFIG=/etc/nixos/hosts/<host>/default.nix~.
 4. Build the configuration and cross your fingers, ~sudo nixos-rebuild switch~.
 5. ???
 6. Profit!
