@@ -43,7 +43,7 @@ window_effects:
   other_windows:
     border:
       enabled: true
-      color: '#d65d0e'
+      color: '#a89984'
 
 window_behavior:
   # New windows are created in this state whenever possible.
