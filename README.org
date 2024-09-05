@@ -51,8 +51,8 @@ sudo nix-channel --update
 2. Clone this github repo.
 3. Run setsimlink.ps1 to create simlinks before installing applications. This will allow version control with Github. You can skip this and manually move files to their locations as well.
 4. Run CTT winutil, using preconfigured winutil.json
-5. Run extras.ps1
-6. Profit!
+5. Run extras.ps1 to install extra packages
+7. Profit!
 
 * Work To Do
 I plan on scripting some of the setup for this to make it as simple as possible.
