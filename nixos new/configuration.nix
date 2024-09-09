@@ -2,17 +2,18 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
     ];
+
   # Enable Flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
-  # Enable VirtualBox for testing
+  # Enable VirtualBox for Test Build
   virtualisation.virtualbox.guest.enable = true;
   virtualisation.virtualbox.guest.draganddrop = true;  
   virtualisation.virtualbox.guest.clipboard = true;
@@ -58,7 +59,7 @@
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.tyler = {
     isNormalUser = true;
-    description = "Tyler Dvorak";
+    description = "Tyler";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [];
   };
@@ -75,6 +76,7 @@
   vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
   wget
   git
+  btop
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

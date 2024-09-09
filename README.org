@@ -9,7 +9,7 @@ These are my dotfiles, there are many like them but these ones are mine.
 #+END_QUOTE
 * Why
 I'm getting back into NixOS and wanted a stable configuration to build off of. I will be expanding into using Nix Flakes and opting for more home-manager usage when I can, but this at least gives me something to start with and looks clean from a directory standpoint.
-I'm also going to be storing Windows Dots here as well. I have not decided how I plan to keep them managed, but am looking into tools like chezmoi.
+
 * Structure
 ** nixos
 - ~bin~ :: Bash scripts that might be useful
@@ -21,14 +21,6 @@ I'm also going to be storing Windows Dots here as well. I have not decided how I
    - - ~pkgs~ :: Contains overlays of packages that are not (yet) in ~nixpkgs~
    - - ~modules~ :: Packages or services that requires their own configuration module
    - - ~variables.nix~ :: Defines an attribute set containing variables available across the whole configuration, used for stuff like hostnames etc.
-
-** windows
-- ~%HOMEPATH%~ :: Home Directory configurations
-   - - ~.glzr~ :: GlazeWM Configuration files
-- ~Microsoft.Powershell_profile.ps1~ :: I've included my profile for Powershell to init Zoxide and Oh My Posh
-- ~settings.json~ :: Windows Terminal Settings, including configured profiles and themes
-- ~winutil.json~ :: JSON Export of preconfigured settings for @ChrisTitusTech's amazing winutil. Easy installation of most applications used.
-- ~extras.ps1~ :: Basic PowerShell script to install anything not configured by CTT winutil automatically.
 
 ** generic
 ~media~ :: Artwork and so on
@@ -46,18 +38,8 @@ sudo nix-channel --update
 5. ???
 6. Profit!
 
-* How To :: windows
-1. Start with a clean Windows Install. Use winutil's MicroWin or some equivalent if you're trying to be extra minimal.
-2. Clone this github repo.
-3. Run setsimlink.ps1 to create simlinks before installing applications. This will allow version control with Github. You can skip this and manually move files to their locations as well.
-4. Run CTT winutil, using preconfigured winutil.json
-5. Run extras.ps1
-6. Profit!
-
 * Work To Do
-I plan on scripting some of the setup for this to make it as simple as possible.
-My goal would be to create an Ansible Playbook that will do this all for me ideally, but I will likely start by settling with simple scripts to run through the steps automatically.
+Get this working at all
 
 * Inspiration
 Chris Titus breaking his bazzite installation prompted this for me.
-I stole this dotfiles blatently from and older version of https://github.com/sondr3 - so thank your for that!
