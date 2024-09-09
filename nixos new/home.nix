@@ -73,24 +73,34 @@
     pciutils # lspci
     usbutils # lsusb
   ];
-
+ 
+  # Setup Hyprland
+  {
+    wayland.windowManager.hyprland.settings = {
+      "$mod" = "SUPER";
+      bind =
+        [
+          "$mod, F, exec, firefox"
+        ]
+        ++ (
+          # workspaces
+          # binds $mod + [shift +] {1..9} to [move to] workspace {1..9}
+          builtins.concatLists (builtins.genList (i:
+              let ws = i + 1;
+              in [
+                "$mod, code:1${toString i}, workspace, ${toString ws}"
+                "$mod SHIFT, code:1${toString i}, movetoworkspace, ${toString ws}"
+              ]
+            )
+            9)
+        );
+    };
+  }
   # basic configuration of git, please change to your own
   programs.git = {
     enable = true;
     userName = "Tyler Dvorak";
     userEmail = "github@tylerdvorak.com";
-  };
-
-  # starship - an customizable prompt for any shell
-  programs.starship = {
-    enable = true;
-    # custom settings
-    settings = {
-      add_newline = false;
-      aws.disabled = true;
-      gcloud.disabled = true;
-      line_break.disabled = true;
-    };
   };
 
   # kitty - people like this more than alacritty because #images
@@ -130,25 +140,26 @@
     };
   };
 
-  programs.fish = {
+  programs.zsh = {
     enable = true;
-    interactiveShellInit = ''
-      set fish_greeting # Disable greeting
-    '';
+    enableCompletion = true;
+    autosuggestion.enable = true;
+    syntaxHighlighting.enable = true;
+    oh-my-zsh = {
+      enable = true;
+      plugins = [ "git" "thefuck" "zsh-syntax-highlighting" "zsh-autosuggestions" "you-should-use" "zsh-bat" ];
+      theme = "catppuccin"
+    }
+    shellAliases = {
+      ll = "ls -l";
+      update = "sudo nixos-rebuild switch";
+    };
+    history = {
+      size = 10000;
+      path = "${config.xdg.dataHome}/zsh/history";
   };
 
-  #This actually sets fish as the shell, not Bash. It just keeps bash enabled because fish is not POSIX compliant.
-  programs.bash = {
-    initExtra = ''
-      if [[ $(${pkgs.procps}/bin/ps --no-header --pid=$PPID --format=comm) != "fish" && -z ''${BASH_EXECUTION_STRING} ]]
-      then
-      shopt -q login_shell && LOGIN_OPTION='--login' || LOGIN_OPTION=""
-      exec ${pkgs.fish}/bin/fish $LOGIN_OPTION
-      fi
-    '';
-  };
-    # set some aliases, feel free to add more or remove some
-
+};
   # This value determines the home Manager release that your
   # configuration is compatible with. This helps avoid breakage
   # when a new home Manager release introduces backwards
